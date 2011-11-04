@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-pstricks-tutorial
-Version:	20111102
+Version:	20111104
 Release:	1
 Summary:	TeXLive pstricks-tutorial package
 Group:		Publishing
@@ -45,6 +45,7 @@ TeXLive pstricks-tutorial package.
 %doc %{_texmfdistdir}/doc/generic/pstricks-tutorial/chap7-figures.pdf
 %doc %{_texmfdistdir}/doc/generic/pstricks-tutorial/chap7-src.tar.gz
 %doc %{_texmfdistdir}/doc/generic/pstricks-tutorial/chap7.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +56,5 @@ TeXLive pstricks-tutorial package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
