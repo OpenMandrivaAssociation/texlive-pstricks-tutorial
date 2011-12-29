@@ -16,8 +16,6 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pstricks-tutorial
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 TeXLive pstricks-tutorial package.
@@ -45,7 +43,6 @@ TeXLive pstricks-tutorial package.
 %doc %{_texmfdistdir}/doc/generic/pstricks-tutorial/chap7-figures.pdf
 %doc %{_texmfdistdir}/doc/generic/pstricks-tutorial/chap7-src.tar.gz
 %doc %{_texmfdistdir}/doc/generic/pstricks-tutorial/chap7.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,5 +53,3 @@ TeXLive pstricks-tutorial package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
