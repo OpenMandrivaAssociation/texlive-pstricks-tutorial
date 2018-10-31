@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-pstricks-tutorial
 Version:	20111104
-Release:	10
+Release:	11
 Summary:	TeXLive pstricks-tutorial package
 Group:		Publishing
 URL:		http://tug.org/texlive
